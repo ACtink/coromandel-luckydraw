@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <div className="outer">
-        <div className="home">
+        {/* <div className="home">
           <div className="nav-buttons-container">
             <Link to="/">
               <button
@@ -22,16 +22,40 @@ function Home() {
               </button>
             </Link>
 
-            {/* <Link to={"/"} >
-        <button className="home-button medium-home-button" >Reset</button>
-        </Link> */}
+            
           </div>
           <img
             src="/lucky-draw-files/Screens/home_screen_1.jpg"
             className="banner-image"
             alt=""
           />
+        </div> */}
+
+        <div className="home">
+          <div className="nav-buttons-container">
+            <Link to="/">
+              <button
+                className="home-button medium-home-button"
+                style={{ color: "rgb(44, 44, 44)" }}
+              >
+                Home
+              </button>
+            </Link>
+          </div>
+          <div className="image-container">
+            <img
+              src="/lucky-draw-files/Screens/home_screen_1.jpg"
+              className="banner-image"
+              alt=""
+              onLoad={(e) => {
+                const container = e.target.parentElement; // Select the parent element
+                container.classList.add("loaded"); // Add the 'loaded' class to the container
+                e.target.classList.add("loaded"); // Add the 'loaded' class to the image
+              }}
+            />
+          </div>
         </div>
+
         {/* <div className="home-down-portion"> */}
 
         <div className="card-container">
@@ -39,6 +63,7 @@ function Home() {
             className="home-down-image"
             src="/lucky-draw-files/Screens/home_screen_2.jpg"
             alt=""
+           
           />
 
           <Link to="/firstprize" className="button-link">

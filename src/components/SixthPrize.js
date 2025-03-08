@@ -69,18 +69,28 @@ function SixthPrize() {
           </button>
         </Link>
       </div>
-      <div className="grandPrize">
+      <div className="image-container">
         <img
           src="/lucky-draw-files/Screens/mixer_screen_1.jpg"
-          className="grandprize-image"
+          className="banner-image"
           alt=""
+          onLoad={(e) => {
+            const container = e.target.parentElement; // Select the parent element
+            container.classList.add("loaded"); // Add the 'loaded' class to the container
+            e.target.classList.add("loaded"); // Add the 'loaded' class to the image
+          }}
         />
       </div>
-      <div className="grandprize-down-portion">
+      <div className="grandprize-down-portion image-container">
         <img
-          className="grand-down-image"
+          className="grand-down-image banner-image"
           src="/lucky-draw-files/Screens/mixer_screen_2.jpg"
           alt=""
+          onLoad={(e) => {
+            const container = e.target.parentElement; // Select the parent element
+            container.classList.add("loaded"); // Add the 'loaded' class to the container
+            e.target.classList.add("loaded"); // Add the 'loaded' class to the image
+          }}
         />
         <div className="items-container">
           {isCardVisible && (
