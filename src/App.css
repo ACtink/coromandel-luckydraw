@@ -121,7 +121,7 @@
   overflow-y: hidden; /* Hides vertical scrollbar */
   overflow-x: auto; /* Enables horizontal scrollbar */
   white-space: nowrap; /* Prevents wrapping of content */
-  scrollbar-gutter: stable; /* Keeps the horizontal scrollbar space consistent */
+  scrollbar-gutter: stable;
 
 }
 /* .card-container .card:first-child {

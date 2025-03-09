@@ -2,47 +2,41 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import YetToImplement from "./components/YetToImplement";
-import FirstPrize from "./components/FirstPrize";
-import SecondPrize from "./components/SecondPrize";
-import CarouselC from "./components/CarouselC";
-import { useState } from 'react';
-import { ShowNewGrandPageContext } from "./components/GrandPageContext";
-import ThirdPrize from "./components/ThirdPrize";
-import FourthPrize from "./components/FourthPrize";
-import FifthPrize from "./components/FifthPrize";
-import SixthPrize from "./components/SixthPrize";
-import SeventhPrize from "./components/SeventhPrize";
+import React, { Suspense } from "react";
 
+const Prize1 = React.lazy(() => import("./components/FirstPrize"));
+const Prize2 = React.lazy(() => import("./components/SecondPrize"));
+
+const Prize3 = React.lazy(() => import("./components/ThirdPrize"));
+const Prize4 = React.lazy(() => import("./components/FourthPrize"));
+
+const Prize5 = React.lazy(() => import("./components/FifthPrize"));
+const Prize6 = React.lazy(() => import("./components/SixthPrize"));
+
+const Prize7 = React.lazy(() => import("./components/SeventhPrize"));
 
 function App() {
-
-   const [showSecondGrandPage , setShowSecondGrandPage] = useState(false)
-   const [showGrandPage2 , setShowgrandPage2] = useState(false)
-
-// const ShowNewGrandPageContext = createContext(false);
-
-
-
   return (
     <div className="App">
-      <Routes>
-        <Route path="/">
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/grandprize" element={<GrandPrize />} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/">
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/grandprize" element={<GrandPrize />} />
           <Route path="/secondgrandprize" element={<GrandPrize2 />} />  */}
 
-          <Route path="/firstprize" element={<FirstPrize />} />
-          <Route path="/secondprize" element={<SecondPrize />} />
-          <Route path="/thirdprize" element={<ThirdPrize />} />
-          <Route path="/fourthprize" element={<FourthPrize />} />
-          <Route path="/fifthprize" element={<FifthPrize />} />
-          <Route path="/sixthprize" element={<SixthPrize />} />
-          <Route path="/seventhprize" element={<SeventhPrize />} />
-      
+            <Route path="/firstprize" element={<Prize1 />} />
+            <Route path="/secondprize" element={<Prize2 />} />
+            <Route path="/thirdprize" element={<Prize3 />} />
+            <Route path="/fourthprize" element={<Prize4 />} />
+            <Route path="/fifthprize" element={<Prize5 />} />
+            <Route path="/sixthprize" element={<Prize6 />} />
+            <Route path="/seventhprize" element={<Prize7 />} />
 
-          <Route path="/*" element={<YetToImplement />} />
-        </Route>
-      </Routes>
+            <Route path="/*" element={<YetToImplement />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 }

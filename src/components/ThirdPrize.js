@@ -80,7 +80,7 @@ function ThirdPrize() {
       <div className="grandprize-down-portion image-container">
         <img
           className="grand-down-image banner-image"
-          src="/lucky-draw-files/Screens/ac_screen_2.jpg"
+          src="/lucky-draw-files/Screens/ac_screen_2.png"
           alt=""
           onLoad={(e) => {
             const container = e.target.parentElement; // Select the parent element
@@ -99,7 +99,7 @@ function ThirdPrize() {
               <div className="card" onClick={handleCardClick}>
                 <div className="card-image-container">
                   <img
-                    src="/lucky-draw-files/cards/ac_card.jpg"
+                    src="/lucky-draw-files/cards/ac_card.jpeg"
                     className="card-image"
                     alt=""
                     onLoad={(e) => {

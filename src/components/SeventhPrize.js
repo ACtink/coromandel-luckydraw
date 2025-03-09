@@ -95,7 +95,7 @@ function SeventhPrize() {
       <div className="grandprize-down-portion image-container">
         <img
           className="grand-down-image banner-image"
-          src="/lucky-draw-files/Screens/pump_screen_2.jpg"
+          src="/lucky-draw-files/Screens/pump_screen_2.png"
           alt=""
           onLoad={(e) => {
             const container = e.target.parentElement; // Select the parent element

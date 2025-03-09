@@ -1,9 +1,6 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import CarouselC from "./CarouselC";
-import "../carousal.css";
-import { ShowNewGrandPageContext } from "./GrandPageContext";
-import { motion } from "framer-motion";
+
 
 function Home() {
  
@@ -11,26 +8,6 @@ function Home() {
   return (
     <>
       <div className="outer">
-        {/* <div className="home">
-          <div className="nav-buttons-container">
-            <Link to="/">
-              <button
-                className="home-button medium-home-button"
-                style={{ color: "rgb(44, 44, 44)" }}
-              >
-                Home
-              </button>
-            </Link>
-
-            
-          </div>
-          <img
-            src="/lucky-draw-files/Screens/home_screen_1.jpg"
-            className="banner-image"
-            alt=""
-          />
-        </div> */}
-
         <div className="home">
           <div className="nav-buttons-container">
             <Link to="/">
@@ -61,7 +38,7 @@ function Home() {
         <div className="card-container">
           <img
             className="home-down-image"
-            src="/lucky-draw-files/Screens/home_screen_2.jpg"
+            src="/lucky-draw-files/Screens/home_screen_2.png"
             alt=""
            
           />
@@ -104,7 +81,7 @@ function Home() {
             <div className="card">
               <div className="card-image-container">
                 <img
-                  src="/lucky-draw-files/cards/ac_card.jpg"
+                  src="/lucky-draw-files/cards/ac_card.jpeg"
                   className="card-image"
                   alt=""
                   onLoad={(e) => {
